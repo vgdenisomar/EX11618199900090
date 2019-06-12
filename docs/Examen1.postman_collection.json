@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0d53a79e-2003-4833-a827-e0b61360ddf9",
+		"name": "Examen1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/recetas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/recetas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "receta",
+							"value": "tabcin 2 veces",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "31",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "observacion",
+							"value": "sirve para la gripe",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "ACT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/recetas/7048061f-59e3-4299-b4c8-a57582492ced",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas/7048061f-59e3-4299-b4c8-a57582492ced",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"7048061f-59e3-4299-b4c8-a57582492ced"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/recetas/332b681d-8ff4-41aa-8f77-f79aa2721abd",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "estado",
+							"value": "INA",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas/332b681d-8ff4-41aa-8f77-f79aa2721abd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"332b681d-8ff4-41aa-8f77-f79aa2721abd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/recetas/c08284c9-6b0c-479b-98bb-cb7c18d9eadf",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas/c08284c9-6b0c-479b-98bb-cb7c18d9eadf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"c08284c9-6b0c-479b-98bb-cb7c18d9eadf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
