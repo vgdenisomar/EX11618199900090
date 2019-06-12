@@ -68,4 +68,20 @@ router.put("/:id", (req,res,next)=>{
     res.status(200).json({ Original: recetaOriginal, Modificada: recetaModificada});
 })
 
+
+router.delete("/:id", (req,res,next)=>{
+    var id = req.params.id;
+    var recetaEliminada = {};
+    coleccionRecetas = coleccionRecetas.map( (e, i) => {
+      if(e.id === id){
+        recetaEliminada = Object.assign({}, e);
+        return false
+      }
+      return true;
+    });
+    res.status(200).json({ Elimanda: recetaEliminada, Recetas: coleccionRecetas});
+})
+
+
+
 module.exports=router;
