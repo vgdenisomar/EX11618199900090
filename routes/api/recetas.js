@@ -40,5 +40,19 @@ router.post("/", (req,res,next)=>{
     res.status(200).json({Recetas:coleccionRecetas});
 })
 
+router.get("/:id", (req,res,next)=>{
+    if  (!req.params.id) return next();
+    var id = req.params.id;
+    var recetas = coleccionRecetas.filter((e, i) => {
+      return (e.id === id);
+    });
+  
+    if (recetas.length > 0) {
+      res.status(200).json(recetas[0]);
+    } else {
+      res.status(404).json({});
+  }
+})
+
 
 module.exports=router;
