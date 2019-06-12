@@ -54,5 +54,18 @@ router.get("/:id", (req,res,next)=>{
   }
 })
 
+router.put("/:id", (req,res,next)=>{
+    var id = req.params.id;
+    var recetaModificada = {};
+    var recetaOriginal = {};
+    coleccionRecetas = coleccionRecetas.map( (e, i) => {
+      if(e.id === id){
+        recetaOriginal = Object.assign({}, e);
+        return recetaModificada = Object.assign({}, e, req.body);
+      }
+      return e;
+    });
+    res.status(200).json({ Original: recetaOriginal, Modificada: recetaModificada});
+})
 
 module.exports=router;
